@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
+.grandstander-uniquifier {
+  font-family: "Grandstander", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+h1{
+  font-family: "Archivo Black", sans-serif;
+  font-style: normal;
+  margin-top: 20px;
+}
+h4{
+  font-family: 'archivo Black', sans-serif;
+  font-optical-sizing: auto;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  margin: 18px;
+}
+p, #showcase, #sidetext, #h2 {
+  font-family: "Grandstander", cursive;
+  font-optical-sizing: auto;
+  font-size: 14px;
+  font-weight: 200;
+  font-style: normal;
+  margin: 18px;
+}
+
+
+/* --- NAVBAR --- */
+.navbar {
+  background-color: #5F0F40;
+  padding: 15px 30px;
+  width: 100%;
+}
+.navbar nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.logo h1#title {
+  color: #fff;
+  font-size: 22px;
+  margin-top: 0;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.navbar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Grandstander", cursive;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.navbar ul li a:hover {
+  color: #FB8B24;
+}
+
+
+
+.button-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 50px auto;
+  background: conic-gradient(
+    #FB8B24 0deg 120deg,
+    #d35d14 120deg 240deg,
+    #5F0F4E 240deg 360deg
+  );
+}
+.button-container .botao {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 50%;
+  transform-origin: bottom left;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  z-index: 2;
+}
+
+.button-container .botao1 { transform: rotate(0deg); }
+.button-container .botao2 { transform: rotate(120deg); }
+.button-container .botao3 { transform: rotate(240deg); }
+
+.button-container .texto {
+  position: absolute;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 3;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.texto1 {
+  top: 30%;
+  left: 65%;
+}
+.texto2 {
+  top: 70%;
+  left: 55%;
+}
+.texto3 {
+  top: 50%;
+  left: 30%;
+}
+
+
+footer {
+  background-color: #121212;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: "Grandstander", cursive;
+  font-optical-sizing: auto;
+  font-size: 14px;
+  font-weight: 200;
+  font-style: normal;
+}
+footer a {
+  color: #a2a2a2;
+  text-decoration: none;
+  margin-left: 12px;
+}

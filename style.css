@@ -5,14 +5,17 @@
 /* roots: são estilizações pré definidas para serem usadas várias vezes */
 :root{
   --roxo: #5F0F40;
-  --amarelo: #f0a61e;
+  --roxoclaro: #9a2985;
+  --roxomaisclaro: #cf51b8;
+  --amarelo: #fcba07;
+  --amareloclaro: #fed65c;
   --laranga: #d35d14;
+  --laranjaclaro: #f38836;
   --corp: rgb(24, 24, 24);
   --fonteh1: "Archivo Black", sans-serif;
   --fonteh2: "Archivo Black", sans-serif;
   --fontep: "Google Sans", sans-serif;
 }
-
 
 * {
   padding: 0;
@@ -20,52 +23,64 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-h1{
+body {
+  overflow-x: hidden; /* Essencial para cortar a metade do menu na parede lateral sem gerar scroll horizontal */
+}
+.corposite {
+  margin: 3% 0;
+  display: flex; /* Alinha o menu e as caixas lado a lado */
+  align-items: flex-start;
+  width: 100%;
+}
+h1 {
   font-family: "Archivo Black", sans-serif;
   font-style: normal;
   color: #fff;
-  font-size: 25px;
+  font-size: 22px;
 }
-h2{
+h2 {
   font-family: "Archivo Black", sans-serif;
   font-size: 18px;
   font-weight: 200;
 }
-p{
+p {
   font-family: "Google Sans", sans-serif;
   font-size: 16px;
   color: #000000;
 }
 
 
-
 /* --- NAVBAR --- */
 .navbar {
-  background-color: #5F0F40;
+  background-color: var(--roxo);
   padding: 15px 30px;
   width: 100%;
+  height: 85px;
+  display: flex;
+  align-items: center;
 }
-.navbar nav {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 .logo {
   display: flex;
   align-items: center;
-  gap: 18px;
+  margin-right: 30px;
+  margin-left: 0;
 }
-.logo h1#title {
+.logo h1 {
   color: #fff;
-  font-size: 22px;
+  font-size: 24px;
   margin-top: 0;
 }
 .navbar ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 22px;
 }
 .navbar ul li a {
   color: #ffffff;
@@ -76,58 +91,91 @@ p{
   transition: color 0.3s ease;
 }
 .navbar ul li a:hover {
-  color: var(--laranga);
+  color: var(--roxomaisclaro);
+}
+.navbar .menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 
 
 /* --- BOX --- */
-.boxhome{
+.boxhome {
   display: flex;
-  gap: 10%;
-  margin: 3%;
-}
-.box1, .box2{
-  border-radius: 10%;
-  border-end-end-radius: 40%;
-  width: 25%;
-}
-.box1 p, .box2 p{
-  padding: 20px;
-}
-.box1{
-  background-color:#ffc55a;
-}
-.box2{
-  background-color: #8b3269;
-}
-.box1 h2{
-  background-color: var(--amarelo);
-}
-.box2 h2{
-  background-color: var(--roxo);
-}
-#h2{
+  flex-direction: column; 
+  align-items: flex-end; 
+  margin-left: auto;
+  margin-right: 5%;
   width: 100%;
-  height: 80px;
-  border-top: 50%;
+}
+div.box1, div.box2 {
+  box-sizing: border-box;
+  border-radius: 7%;
+  border-bottom-right-radius: 32%;
+  margin: 10px 0;
+  padding: 28px;
+  width: 380px;           
+  max-width: 90%;
+  overflow: hidden;
+}
+div.box1 {
+  background-color: #fed65c;
+  transform: translateX(-40px); 
+}
+div.box2 {
+  background-color: #f38836;
+  transform: translateX(40px);  
+}
+#box1h2 {
+  box-sizing: border-box;
+  width: calc(100% + 56px); 
+  margin: -28px -28px 20px -28px; 
+  padding: 15px 28px;
+  text-align: center;
+  background-color: #f9ca4b;  
+  border-top-left-radius: 7%;     
+  border-top-right-radius: 7%;
+}
+#box2h2 {
+  box-sizing: border-box;
+  width: calc(100% + 56px);
+  margin: -28px -28px 20px -28px;
+  padding: 15px 28px;
+  text-align: center;
+  background-color: #e27019;    
+  border-top-left-radius: 7%;     
+  border-top-right-radius: 7%;
 }
 
 
 /* --- MENU PIZZA --- */
 .button-container {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 50px auto;
+  flex-shrink: 0; 
+  margin-right: -150px; /* Joga para a esquerda e esconde exatamente a metade na parede */
+  margin-top: 50px;
   background: conic-gradient(
     #FB8B24 0deg 120deg,
     #d35d14 120deg 240deg,
     #5F0F4E 240deg 360deg
   );
 }
+
+@keyframes girarPizza {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .button-container .botao {
   position: absolute;
   width: 50%;
@@ -168,7 +216,6 @@ p{
   left: 30%;
 }
 
-
 footer {
   background-color: #121212;
   color: #fff;
@@ -180,7 +227,8 @@ footer {
   font-weight: 200;
   font-style: normal;
 }
-footer a, footer p{
+
+footer a, footer p {
   color: #a2a2a2;
   text-decoration: none;
   margin-left: 12px;

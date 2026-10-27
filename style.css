@@ -38,7 +38,12 @@ h1 {
   color: #fff;
   font-size: 22px;
 }
-h2 {
+h2{
+  color: #ebe1e1;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 18px;
+}
+h3 {
   font-family: "Archivo Black", sans-serif;
   font-size: 18px;
   font-weight: 200;
@@ -69,13 +74,24 @@ p {
 .logo {
   display: flex;
   align-items: center;
-  margin-right: 30px;
   margin-left: 0;
 }
-.logo h1 {
+.titulo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 10px;
+
+}
+.titulo h1 {
   color: #fff;
   font-size: 24px;
   margin-top: 0;
+}
+.titulo h2 {
+  color: #e8dede;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 20px;
 }
 .navbar ul {
   list-style: none;
@@ -128,7 +144,7 @@ div.box2 {
   background-color: #f38836;
   transform: translateX(40px);  
 }
-#box1h2 {
+#box1h3 {
   box-sizing: border-box;
   width: calc(100% + 56px); 
   margin: -28px -28px 20px -28px; 
@@ -138,7 +154,7 @@ div.box2 {
   border-top-left-radius: 7%;     
   border-top-right-radius: 7%;
 }
-#box2h2 {
+#box2h3 {
   box-sizing: border-box;
   width: calc(100% + 56px);
   margin: -28px -28px 20px -28px;
@@ -166,7 +182,6 @@ div.box2 {
     #5F0F4E 240deg 360deg
   );
 }
-
 @keyframes girarPizza {
   from {
     transform: rotate(0deg);
@@ -175,7 +190,6 @@ div.box2 {
     transform: rotate(360deg);
   }
 }
-
 .button-container .botao {
   position: absolute;
   width: 50%;
@@ -188,11 +202,9 @@ div.box2 {
   background: transparent;
   z-index: 2;
 }
-
 .button-container .botao1 { transform: rotate(0deg); }
 .button-container .botao2 { transform: rotate(120deg); }
 .button-container .botao3 { transform: rotate(240deg); }
-
 .button-container .texto {
   position: absolute;
   color: #fff;
@@ -202,7 +214,6 @@ div.box2 {
   pointer-events: none;
   transform: translate(-50%, -50%);
 }
-
 .texto1 {
   top: 30%;
   left: 65%;
@@ -216,6 +227,9 @@ div.box2 {
   left: 30%;
 }
 
+
+
+/* --- FOOTER --- */
 footer {
   background-color: #121212;
   color: #fff;

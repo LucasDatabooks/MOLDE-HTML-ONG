@@ -26,12 +26,6 @@
 body {
   overflow-x: hidden; /* Essencial para cortar a metade do menu na parede lateral sem gerar scroll horizontal */
 }
-.corposite {
-  margin: 3% 0;
-  display: flex; /* Alinha o menu e as caixas lado a lado */
-  align-items: flex-start;
-  width: 100%;
-}
 h1 {
   font-family: "Archivo Black", sans-serif;
   font-style: normal;
@@ -169,13 +163,13 @@ div.box2 {
 /* --- MENU PIZZA --- */
 .button-container {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0; 
-  margin-right: -150px; /* Joga para a esquerda e esconde exatamente a metade na parede */
-  margin-top: 50px;
+  margin: 25px;
+  margin-left: -25%;
   background: conic-gradient(
     #FB8B24 0deg 120deg,
     #d35d14 120deg 240deg,
@@ -202,10 +196,22 @@ div.box2 {
   background: transparent;
   z-index: 2;
 }
+
 .button-container .botao1 { transform: rotate(0deg); }
 .button-container .botao2 { transform: rotate(120deg); }
 .button-container .botao3 { transform: rotate(240deg); }
+
 .button-container .texto {
+  position: absolute;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 3;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+.texto1,.texto2,.texto3 {
+  font-family: var(--fonteh2);
   position: absolute;
   color: #fff;
   font-weight: bold;
@@ -241,7 +247,6 @@ footer {
   font-weight: 200;
   font-style: normal;
 }
-
 footer a, footer p {
   color: #a2a2a2;
   text-decoration: none;

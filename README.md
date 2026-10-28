@@ -1,5 +1,26 @@
-# MOLDE-HTML-ONG
-Trabalho de desenvolvimento pra testar as habilidades com HTML
+## Identidade visual
+
+| Elemento | Cor | Código |
+|---|---|---|
+| Roxo principal | Roxo profundo | `#5F0F40` |
+| Roxo secundário | Roxo claro | `#9A2985` |
+| Roxo de destaque | Rosa-arroxeado | `#CF51B8` |
+| Amarelo principal | Amarelo vibrante | `#FCBA07` |
+| Amarelo secundário | Amarelo suave | `#FED65C` |
+| Laranja principal | Laranja queimado | `#D35D14` |
+| Laranja secundário | Laranja vibrante | `#F38836` |
+| Cor do texto | Preto suave | `#181818` |
+
+### Tipografia
+
+- **Archivo Black:** títulos principais e chamadas de destaque.
+- **Grandstander:** navegação e elementos que pedem uma identidade mais descontraída.
+- **Google Sans:** textos corridos, parágrafos e informações gerais.
+
+
+
+# ------------------------------------- OBESERVAÇÕES ------------------------ #
+
 
 # AULA 27/10 - JAVASCRIPT
 // Localiza os dois elementos da página.
@@ -13,7 +34,6 @@ function mostrarAjuda() {
  
 // Executa a função a cada clique.
 botao.addEventListener("click", mostrarAjuda);
-
 
 
 # IGUAIS NO JS

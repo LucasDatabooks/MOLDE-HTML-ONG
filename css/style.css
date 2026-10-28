@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Marcellus&family=Marcellus+SC&family=Syne:wght@400..800&display=swap');
+
+/* roots: são estilizações pré definidas para serem usadas várias vezes */
+:root{
+  --roxo: #5F0F40;
+  --roxoclaro: #9a2985;
+  --roxomaisclaro: #cf51b8;
+  --amarelo: #fcba07;
+  --amareloclaro: #fed65c;
+  --laranga: #d35d14;
+  --laranjaclaro: #f38836;
+  --corp: rgb(24, 24, 24);
+  --fonteh1: "Archivo Black", sans-serif;
+  --fonteh2: "Archivo Black", sans-serif;
+  --fontep: "Google Sans", sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  overflow-x: hidden; /* Essencial para cortar a metade do menu na parede lateral sem gerar scroll horizontal */
+}
+h1 {
+  font-family: "Archivo Black", sans-serif;
+  font-style: normal;
+  color: #fff;
+  font-size: 22px;
+}
+h2{
+  color: #ebe1e1;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 18px;
+}
+h3 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+}
+p {
+  font-family: "Google Sans", sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+
+
+
+/* --- NAVBAR --- */
+.navbar {
+  background-color: var(--roxo);
+  padding: 15px 30px;
+  width: 100%;
+  height: 85px;
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.titulo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 10px;
+}
+.titulo h1 {
+  color: #fff;
+  font-size: 24px;
+}
+.titulo h2 {
+  color: #e8dede;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 20px;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+.navbar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Grandstander", cursive;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.navbar ul li a:hover {
+  color: var(--roxomaisclaro);
+}
+.navbar .menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+
+
+/* --- BOX --- */
+.boxhome {
+  display: flex;
+  width: 100%;
+  gap: 10%;
+  margin-left: 30%;
+}
+div.box1, div.box2 {
+  box-sizing: border-box;
+  border-radius: 7%;
+  border-bottom-right-radius: 32%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 28px;
+  width: 380px;           
+  max-width: 90%;
+  overflow: hidden;
+}
+div.box1 {
+  background-color: #fed65c;
+}
+div.box2 {
+  background-color: #f38836;
+}
+#box1h3 {
+  box-sizing: border-box;
+  width: calc(100% + 56px); 
+  margin: -28px -28px 20px -28px; 
+  padding: 15px 28px;
+  text-align: center;
+  background-color: #f9ca4b;  
+  border-top-left-radius: 7%;     
+  border-top-right-radius: 7%;
+}
+#box2h3 {
+  box-sizing: border-box;
+  width: calc(100% + 56px);
+  margin: -28px -28px 20px -28px;
+  padding: 15px 28px;
+  text-align: center;
+  background-color: #e27019;    
+  border-top-left-radius: 7%;     
+  border-top-right-radius: 7%;
+}
+#boxhomeh2{
+  color: var(--corp);
+  font-family: var(--fonteh2);
+  font-size: 40px;
+  margin: 30px;
+}
+
+
+
+/* --- MENU PIZZA --- */
+#menupizza {
+  background-color: white;
+  width: 100%;
+  height: 900px;
+}
+.button-container {
+  position: relative;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: 400% 400%;
+  animation: moverGradiente 10s ease infinite;
+  background: conic-gradient(
+    #FB8B24 0deg 120deg,
+    #d35d14 120deg 240deg,
+    #5F0F4E 240deg 360deg
+  );
+}
+.button-container .botao {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 50%;
+  transform-origin: bottom left;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  z-index: 2;
+}
+
+.button-container .botao1 { transform: rotate(0deg); }
+.button-container .botao2 { transform: rotate(120deg); }
+.button-container .botao3 { transform: rotate(240deg); }
+
+.button-container .texto {
+  position: absolute;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 3;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+.texto1,.texto2,.texto3 {
+  font-family: var(--fonteh2);
+  position: absolute;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  z-index: 3;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+.texto1 {
+  top: 30%;
+  left: 65%;
+}
+.texto2 {
+  top: 70%;
+  left: 55%;
+}
+.texto3 {
+  top: 50%;
+  left: 30%;
+}
+
+
+
+/* --- FOOTER --- */
+footer {
+  height: 160px;
+  background-color: #121212;
+  padding: 20px;
+  text-align: center;
+  font-style: normal;
+}
+footer p{
+  color: rgb(236, 236, 236);
+  font-family: var(--fontep);
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+footer a {
+  font-family: var(--fontep);
+  color: #a2a2a2;
+  text-decoration: none;
+  margin-left: 12px;
+  font-size: 12px;
+}

@@ -162,72 +162,94 @@ div.box2 {
 
 
 /* --- MENU PIZZA --- */
+/* O JS muda --rot (giro), --bg-menu (fundo) e --cor-frase (cor do texto) */
 #menupizza {
-  background-color: white;
-  width: 100%;
-  height: 900px;
+  --tam: 700px;
+  --rot: 30deg;
+  --bg-menu: #fed65c;
+  --cor-frase: #181818;
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: calc(var(--tam) + 120px);
+  overflow: hidden; /* esconde a metade esquerda da pizza */
+  background-color: var(--bg-menu);
+  transition: background-color 1s ease;
+}
+.roda-area {
+  position: relative;
+  flex-shrink: 0;
+  width: calc(var(--tam) / 2); /* só a metade visível ocupa espaço */
+  height: var(--tam);
 }
 .button-container {
-  position: relative;
-  width: 700px;
-  height: 700px;
+  position: absolute;
+  top: 0;
+  left: calc(var(--tam) / -2); /* 50% da pizza fica fora da tela */
+  width: var(--tam);
+  height: var(--tam);
   border-radius: 50%;
   overflow: hidden;
-  background-size: 400% 400%;
-  animation: moverGradiente 10s ease infinite;
   background: conic-gradient(
     #FB8B24 0deg 120deg,
     #d35d14 120deg 240deg,
     #5F0F4E 240deg 360deg
   );
+  box-shadow: 0 0 0 8px #fff, 0 20px 50px rgba(0, 0, 0, 0.35);
+  transform: rotate(var(--rot));
+  transition: transform 1.2s cubic-bezier(.65, 0, .35, 1);
 }
-.button-container .botao {
+/* cada fatia é um link com a área de clique recortada em 120° */
+.fatia {
   position: absolute;
-  width: 50%;
-  height: 50%;
-  top: 0;
-  left: 50%;
-  transform-origin: bottom left;
-  border: none;
-  cursor: pointer;
-  background: transparent;
-  z-index: 2;
+  inset: 0;
+  display: block;
 }
+.fatia:nth-child(1) { clip-path: polygon(50% 50%, 50% -70%, 153.9% 110%); }
+.fatia:nth-child(2) { clip-path: polygon(50% 50%, 153.9% 110%, -53.9% 110%); }
+.fatia:nth-child(3) { clip-path: polygon(50% 50%, -53.9% 110%, 50% -70%); }
+.fatia:nth-child(1) .texto { --x: 78.6%; --y: 33.5%; }
+.fatia:nth-child(2) .texto { --x: 50%;   --y: 83%; }
+.fatia:nth-child(3) .texto { --x: 21.4%; --y: 33.5%; }
 
-.button-container .botao1 { transform: rotate(0deg); }
-.button-container .botao2 { transform: rotate(120deg); }
-.button-container .botao3 { transform: rotate(240deg); }
-
-.button-container .texto {
+/* o texto gira ao contrário da pizza para ficar sempre em pé */
+.texto {
   position: absolute;
+  left: var(--x);
+  top: var(--y);
   color: #fff;
-  font-weight: bold;
-  font-size: 16px;
-  z-index: 3;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-}
-.texto1,.texto2,.texto3 {
   font-family: var(--fonteh2);
-  position: absolute;
-  color: #fff;
-  font-weight: bold;
-  font-size: 16px;
-  z-index: 3;
+  font-size: calc(var(--tam) * 0.03);
+  white-space: nowrap;
   pointer-events: none;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(calc(var(--rot) * -1));
+  transition: transform 1.2s cubic-bezier(.65, 0, .35, 1), font-size .6s ease;
 }
-.texto1 {
-  top: 30%;
-  left: 65%;
+.fatia.ativa .texto { font-size: calc(var(--tam) * 0.04); }
+.fatia:focus-visible .texto { outline: 3px solid #fff; outline-offset: 6px; }
+
+.frase-area {
+  flex: 1;
+  padding: 0 clamp(20px, 5vw, 80px) 0 clamp(28px, 5vw, 70px);
 }
-.texto2 {
-  top: 70%;
-  left: 55%;
+#frase {
+  font-family: var(--fonteh1);
+  font-size: clamp(22px, 3.6vw, 52px);
+  line-height: 1.15;
+  color: var(--cor-frase);
+  max-width: 14em;
+  transition: opacity .5s ease, color 1s ease;
 }
-.texto3 {
-  top: 50%;
-  left: 30%;
+#frase.some { opacity: 0; }
+
+@media (max-width: 768px) {
+  #menupizza { --tam: 480px; }
+}
+@media (max-width: 480px) {
+  #menupizza { --tam: 380px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .button-container, .texto, #menupizza, #frase { transition: none; }
 }
 
 

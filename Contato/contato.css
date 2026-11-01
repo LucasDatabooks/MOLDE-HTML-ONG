@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 24px;
+  text-align: center;
+}
+
+.contato {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.campo {
+  margin-bottom: 16px;
+  display: block;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+input.invalido,
+textarea.invalido {
+  border-color: #c0392b;
+  background: #fdf3f2;
+}
+
+.erro {
+  color: #c0392b;
+  font-size: 0.85rem;
+  min-height: 1.1em;
+  margin-top: 4px;
+}
+
+button {
+  background: #2e7d32;
+  color: #fff;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.resumo {
+  display: none;
+  background: #fdf3f2;
+  border: 1px solid #c0392b;
+  color: #c0392b;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.resumo.visivel {
+  display: block;
+}
+
+.resumo ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.sucesso {
+  color: #2e7d32;
+  font-weight: bold;
+  margin-top: 12px;
+}

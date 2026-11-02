@@ -17,178 +17,270 @@
   --fontep: "Google Sans", sans-serif;
 }
 
+/* Configurações que tangem a página toda e não um campo específico*/
 *{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  text-decoration: none;
+  padding: 0; /* Preenchimento de área */
+  margin: 0; /* Margem em geral */
+  box-sizing: border-box; /* Configurações para ficar dentro do espaço da caixa */
+  text-decoration: none; /* Decoração do texto */
 }
 
+/* Corpo do HTML */
 body{
-  overflow-x: hidden; /* Essencial para cortar a metade do menu na parede lateral sem gerar scroll horizontal */
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  overflow-x: hidden; /* Para cortar a metade do menu na parede lateral sem gerar scroll horizontal */
+  display: flex; /* Display flexível pra não ter quebra no dimensionamento do conteúdo se a página não estiver em 100%*/
+  flex-direction: column; /* Direção da flexibilização */
+  min-height: 100vh; /* Trava a altura geral até certo ponto da página */
+  background: linear-gradient(200deg, var(--amareloclaro), var(--laranjaclaro)); /* Define a cor inicial e a cor final do gradiente */
 }
+
+/* Título da ONG */
 h1{
-  font-family: "Archivo Black", sans-serif;
-  font-style: normal;
-  color: #fff;
-  font-size: 22px;
+  font-family: "Archivo Black", sans-serif; /* Fontes usadas no H1*/
+  font-style: normal; /* Estilo da fonte usada no H1 */
+  color: #fff; /* Cor da fonte */
+  font-size: 22px; /* Tamanho da fonte */
 }
+
+/* Subtítulo da ONG */
 h2{
-  color: #ebe1e1;
-  font-family: "Archivo Black", sans-serif;
-  font-size: 18px;
-}
-h3 {
-  font-family: "Archivo Black", sans-serif;
-  font-size: 18px;
-  font-weight: 200;
-  color: #fff;
-}
-p {
-  font-family: "Google Sans", sans-serif;
-  font-size: 16px;
-  color: #000000;
+  color: #ebe1e1; /* Cor da fonte */
+  font-family: "Archivo Black", sans-serif; /* Fontes usadas no H2*/
+  font-size: 18px; /* Tamanho da fonte */
 }
 
-
-/* --- NAVBAR --- */
-.navbar {
-  background-color: var(--amarelo);
-  padding: 15px 30px;
-  width: 100%;
-  height: 85px;
-  display: flex;
-  align-items: center;
+/* Demais textos */
+h3{
+  font-family: "Archivo Black", sans-serif; /* Fontes usadas no H3*/
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: 100; /* 'Peso' da fonte */
+  color: #fff; /* Cor da fonte */
 }
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+
+/* Parágrafos em geral */
+p{
+  font-family: "Google Sans", sans-serif; /* Fontes usadas nos parágrafos*/
+  font-size: 16px; /* Tamanho da fonte */
+  color: #000000; /* Cor da fonte */
+}
+
+/* Cabeçalho */
+.navbar{
+  background-color: var(--amarelo); /* Cor de fundo */
+  padding: 15px 30px; /* Preenchimento de área */
+  width: 100%; /* Largura */
+  height: 85px; /* Altura */
+  display: flex; /* Determina a disposição das caixas geradas por um elemento */
+  align-items: center; /* Alinha itens no centro */
+}
+
+.nav{
+  display: flex; /* Determina a disposição das caixas geradas por um elemento */
+  justify-content: space-between; /* Centraliza o conjunto na tela */
+  align-items: center; /* Alinha itens no centro */
+  width: 100%; /* Largura */
   margin: 0 auto;
 }
-.logo {
-  display: flex;
-  align-items: center;
-  margin-left: 0;
+
+/* Logo da ONG */
+.logo{
+  display: flex; /* Determina a disposição das caixas geradas por um elemento */
+  align-items: center; /* Alinha itens no centro */
+  margin-left: 0; /* Margem esquerda */
 }
-.titulo {
-  display: flex;
+
+.titulo{
+  display: flex; /* Determina a disposição das caixas geradas por um elemento */
   flex-direction: column;
   text-align: center;
   margin-left: 10px;
-
 }
-.titulo h1 {
-  color: #fff;
-  font-size: 24px;
+
+.titulo h1{
+  color: #fff; /* Cor geral */
+  font-size: 24px; /* Tamanho da fonte */
   margin-top: 0;
 }
-.titulo h2 {
-  color: #fff;
+
+.titulo h2{
+  color: #fff; /* Cor geral */
   font-family: "Archivo Black", sans-serif;
-  font-size: 20px;
+  font-size: 20px; /* Tamanho da fonte */
 }
-.navbar ul {
+
+.navbar ul{
   list-style: none;
-  display: flex;
+  display: flex; /* Determina a disposição das caixas geradas por um elemento */
   gap: 22px;
 }
-.navbar ul li a {
-  color: #ffffff;
+
+.navbar ul li a{
+  color: #ffffff; /* Cor geral */
   text-decoration: none;
   font-family: "Grandstander", cursive;
-  font-size: 16px;
+  font-size: 16px; /* Tamanho da fonte */
   font-weight: 500;
   transition: color 0.3s ease;
 }
-.navbar ul li a:hover {
-  color: var(--prog);
+
+.navbar ul li a:hover{
+  color: var(--roxomaisclaro);
 }
-.navbar .menu-toggle {
-  display: none;
+
+.navbar .menu-toggle{
+  display: none; /* Determina a disposição das caixas geradas por um elemento */
   flex-direction: column;
   cursor: pointer;
 }
+
 h3:hover{
-    color: #000000;
+  color: var(--roxomaisclaro);
 }
+
 .proj:hover{
-    color: #000000;
+  color: var(--roxomaisclaro);
 }
 
-/* --- BOX --- */
+/* Conjunto de caixas que contém os textos/fotos */
 .boxproj1 {
-display: flex;
-flex-direction: row;       /* Deixa os 3 cartões lado a lado em telas grandes */
-justify-content: center;   /* Centraliza o conjunto na tela */
-align-items: stretch;      /* Mantém todos com a mesma altura se o conteúdo variar */
-gap: 30px;                 /* Espaçamento perfeito e responsivo entre os cartões */
-padding: 75px 20px;
-flex: 1;                   
-flex-wrap: wrap;           /* Se o zoom aumentar muito ou for em tablet/celular, eles descem organizados */
-text-align: justify;
-color: #fff;
-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); /* Adiciona sombra escura leve */
+  display: flex; /* Determina a disposição das caixas geradas por um elemento */
+  flex-direction: row; /* Deixa os 3 cartões lado a lado em telas grandes */
+  justify-content: center; /* Centraliza o conjunto na tela */
+  align-items: stretch; /* Mantém todos com a mesma altura se o conteúdo variar */
+  gap: 30px; /* Espaçamento perfeito e responsivo entre os cartões */
+  padding: 75px 20px; /* Preenchimento de área */
+  flex: 1;                   
+  flex-wrap: wrap; /* Se o zoom aumentar muito ou for em tablet/celular, eles descem organizados */
+  text-align: justify; 
+  color: #fff; /* Cor geral */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); /* Adiciona sombra escura leve */
 }
 
-div.box1, div.box2, div.box3 {
-  box-sizing: border-box;
-  border-radius: 20px;       /* Bordas arredondadas modernas */
-  padding: 28px;
-  width: 380px;              
-  max-width: 100%;
-  background-color: #fed65c;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+div.box1, div.box2, div.box3{
+  box-sizing: border-box; /* Configurações para ficar dentro do espaço da caixa */
+  border-radius: 20px; /* Bordas arredondadas modernas */
+  padding: 38px; /* Preenchimento de área */
+  width: 380px; /* Largura */
+  max-width: 100%; /* Largura máxima */
+  background-color: var(--amarelo); /* Cor do fundo de tela */
+  display: flex; /* Determina a disposição das caixas geradas por um elemento */
+  flex-direction: column; /* Deixa os 3 cartões em coluna em telas grandes */
+  justify-content: space-between; /* Centraliza o conjunto na tela */ 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombreamento das caixas */ 
 }
-#box1h3, #box2h3, #box3h3 {
-width: calc(100% + 56px); 
-margin: -28px -28px 20px -28px; 
-padding: 15px 28px;
-text-align: center;
-background-color: #f9ca4b;    
-border-top-left-radius: 20px;    
-border-top-right-radius: 20px;
+
+#box1h3, #box2h3, #box3h3{
+  width: calc(100% + 56px); /* Largura */
+  margin: -28px -28px 28px -28px; /* Margens */
+  text-align: center; /* Alinhamento do texto */
+  background-color: var(--amarelo); /* Cor de fundo */
+  border-top-left-radius: 20px; /* Formato da borda da esquerda */ 
+  border-top-right-radius: 20px; /* Formato da borda da direita */ 
 }
-.proj {
-text-align: justify;
-color: #fff;
+
+.proj{
+  text-align: justify; /* Alinhamento do texto */
+  font-weight: bold; /* Peso da fonte, no caso, negrito */
+  font-size: 16px; /* Tamanho da fonte */
+  color: #fff; /* Cor geral */
 }
 
 /* Imagens dentro dos cards responsivas */
-#recreacao, #movimente, #corrida {
-border-radius: 10px;
-margin-top: 20px;
-padding: 5px;
-width: 100%;               /* Adapta-se perfeitamente à largura do card */
-height: auto;
-object-fit: cover;
-border: 1px solid rgba(255, 255, 255, 0.4); /* Adiciona uma borda leve e semi-transparente */
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  /* Adiciona um sombreamento elegante ao redor da foto */
+#recreacao, #movimente, #corrida{
+  border-radius: 5px; /* Grossura da borda */
+  margin-top: 20px; /* Espaço da margem do topo */
+  padding: 5px; /* Preenchimento de área */
+  width: 100%; /* Largura */
+  height: auto; /* Altura */
+  object-fit: cover; /* Encaixe do objeto */
+  border: 1px solid rgba(255, 255, 255, 0); /* Adiciona uma borda leve e semi-transparente */
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);  /* Adiciona um sombreamento elegante ao redor da foto */
+  cursor: pointer; /* Tipo de cursor do mouse */
+  transition: opacity 0.3s ease; /* Transição de cores */
 }
 
-/* --- FOOTER --- */
-footer {
-  background-color: #121212;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-family: "Grandstander", cursive;
-  font-optical-sizing: auto;
-  font-size: 14px;
-  font-weight: 200;
-  font-style: normal;
-  width: 100%;
+/* Passar o mouse em cima das imagens*/
+#movimente:hover, #recreacao:hover, #corrida:hover{
+  opacity: 0.9; /* Opacidade quando passar o mouse em cima */
 }
-footer a, footer p {
-  color: #a2a2a2;
-  text-decoration: none;
-  margin-left: 12px;
-  font-size: 12px;
+
+/* Titulo da página */
+#oquefazemos{
+  width: 100%; /* Largura */
+  max-width: 1200px; /* Largura máxima */
+  margin: 30px auto 0 auto; /* Centraliza o elemento horizontalmente na tela usando margens automáticas */
+  text-align: center; /* Centraliza o texto dentro da sua própria caixa */
+  color: #fff; /* Texto branco */
+  font-size: 3rem; /* Tamanho grande */
+  font-weight: bold; /* Peso da fonte, no caso, negrito */
+  text-shadow: 2px 2px 1px var(--corp); /* Sombra preta */
+  padding-top: 15px; /* Preenchimento do topo */
+}
+
+/* Rodapé */
+footer {
+  background-color: #121212; /* Cor de fundo */
+  color: #fff; /* Cor */
+  padding: 20px; /* Preenchimento de área */
+  text-align: center; /* Centraliza o texto dentro da sua própria caixa */
+  font-family: "Grandstander", cursive;  /* Tipo de fonte usada */
+  font-optical-sizing: auto; /* Dimensionamento optico da fonte */
+  font-size: 14px; /* Tamanho da fonte */
+  font-weight: 200; /* Peso da fonte */
+  font-style: normal; /* Estilo da fonte */
+  width: 100%; /* Largura */
+}
+
+/* Links e parágrafos do rodapé */
+footer a, footer p{
+  color: #a2a2a2; /* Cor geral */
+  text-decoration: none; /* Decoração do texto */
+  margin-left: 12px; /* Margem direita */
+  font-size: 12px; /* Tamanho da fonte */
+}
+
+/* Fundo escuro da modal */
+.modal-zoom {
+  display: none; /* Oculto por padrão */
+  position: fixed; /* Posição do elemento */
+  z-index: 9999; /* Controla a ordem de sobreposição da profundidade do elemento */ 
+  left: 0; /* Posição da esquerda */
+  top: 0; /* Posição do topo */
+  width: 100%; /* Largura */
+  height: 100%; /* Altura */
+  background-color: rgba(0, 0, 0, 0.85); /* Fundo preto semi-transparente */
+  justify-content: center; /* Posição dos itens */
+  align-items: center; /* Alinhamento dos itens */
+}
+
+/* Imagem quando ampliada */
+.modal-conteudo {
+  max-width: 85%; /* Largura máxima */
+  max-height: 85vh; /* Altura máxima */
+  border-radius: 10px; /* Grossura da borda */
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5); /* Sombreamento da caixa */
+  animation: zoomIn 0.3s ease; /* Animação de zoom */
+}
+
+/* Transformação quando em zoom */
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; } /* Aqui mostra a escala inicial */
+  to { transform: scale(1); opacity: 1; } /* Aqui para qual tamanho vai */
+}
+
+/* Botão de Fechar (X) */
+.fechar-zoom{
+  position: absolute; /* Posicionamento em relação aos demais elementos */
+  top: 25px; /* Posicionamento do topo */
+  right: 40px; /* Posicionamento à direita*/
+  color: #fff; /* Cor do botão */
+  font-size: 45px; /* Tamanho da fonte */
+  font-weight: bold; /* Peso da fonte, no caso, negrito*/
+  cursor: pointer; /* Tipo de cursor do mouse*/
+  transition: color 0.3s; /* Transição quando em cima do botão */
+}
+
+/* Botão de fechamento de zoom */
+.fechar-zoom:hover{
+  color: var(--amarelo); /* Cor do hover de fechamento */
 }

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós - Health Nova</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Cabeçalho e Navegação Semântica -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand">
+        <!-- SVG Fiel à Logo Health Nova (Azul e Verde) -->
+        <svg class="brand-logo" viewBox="0 0 400 350" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logótipo Health Nova">
+          <defs>
+            <!-- Gradiente do Coração Azul -->
+            <linearGradient id="hnHeartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0066C4" />
+              <stop offset="50%" stop-color="#008BE3" />
+              <stop offset="100%" stop-color="#26B4E8" />
+            </linearGradient>
+            <!-- Gradiente da Folha Verde -->
+            <linearGradient id="hnLeafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#0D8240" />
+              <stop offset="60%" stop-color="#27B453" />
+              <stop offset="100%" stop-color="#73D137" />
+            </linearGradient>
+            <!-- Gradiente da Estrela e Rasto -->
+            <linearGradient id="hnStarGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#005BAA" />
+              <stop offset="60%" stop-color="#0092E4" />
+              <stop offset="100%" stop-color="#28C5F5" />
+            </linearGradient>
+          </defs>
+
+          <!-- Contorno do Coração Azul -->
+          <path d="M 200,310 C 180,290 50,210 50,120 C 50,60 95,25 150,25 C 180,25 200,45 200,45 C 200,45 220,25 250,25 C 305,25 350,60 350,120 C 350,170 300,230 250,270 L 225,292 C 215,302 205,308 200,310 Z" fill="none" stroke="url(#hnHeartGrad)" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" />
+          
+          <!-- Folha Verde Interior -->
+          <path d="M 110,130 C 100,180 140,260 195,280 C 195,280 190,200 150,150 C 135,130 115,125 110,130 Z" fill="url(#hnLeafGrad)" />
+          
+          <!-- Rasto Azul Ascendente -->
+          <path d="M 170,180 C 220,170 290,120 335,45" fill="none" stroke="url(#hnStarGrad)" stroke-width="26" stroke-linecap="round" />
+          
+          <!-- Estrela Verde/Azul -->
+          <polygon points="335,15 344,38 368,38 349,52 356,75 335,60 314,75 321,52 302,38 326,38" fill="#36BD57" />
+        </svg>
+
+        <div class="brand-text-container">
+          <span class="brand-title">HEALTH NOVA</span>
+          <span class="brand-subtitle">TRANSFORMANDO VIDAS ATRAVÉS DA SAÚDE</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="sobre.html" class="active">Sobre Nós</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+
+      <a href="contato.html" class="btn btn-primary">Participe</a>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <!-- Hero / História da Instituição -->
+    <section class="hero-sobre">
+      <div class="container hero-content">
+        <span class="badge">Nossa História</span>
+        <h1>Transformando Vidas Através da Saúde</h1>
+        <p>A Health Nova nasce com a missão de democratizar o acesso à saúde de qualidade, promovendo prevenção, bem-estar e cuidados humanizados nas comunidades vulneráveis.</p>
+      </div>
+    </section>
+
+    <!-- Secção de Missão, Visão e Valores-->
+    <section class="section" id="filosofia">
+      <div class="container">
+        <div class="section-title">
+          <h2>Missão, Visão e Valores</h2>
+          <p>Os pilares essenciais da nossa atuação na área da saúde.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card pillar-card">
+            <div class="icon-box icon-purple">🎯</div>
+            <h3>Missão</h3>
+            <p>Promover a saúde integral, a prevenção de doenças e o cuidado humanizado para populações vulneráveis, garantindo qualidade de vida e dignidade.</p>
+          </article>
+
+          <article class="card pillar-card">
+            <div class="icon-box icon-yellow">👁️</div>
+            <h3>Visão</h3>
+            <p>Ser reconhecida como referência em inovação e impacto social na área da saúde, integrando tecnologia, voluntariado e atendimento comunitário.</p>
+          </article>
+
+          <article class="card pillar-card">
+            <div class="icon-box icon-orange">❤️</div>
+            <h3>Valores</h3>
+            <p>Humanização no atendimento, ética médica, equidade no acesso à saúde, cooperação comunitária e responsabilidade social contínua.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Público Atendido e Objetivos -->
+    <section class="section bg-light" id="publico">
+      <div class="container publico-container">
+        <div class="publico-texto">
+          <h2>Quem Nós Atendemos</h2>
+          <p>Nossa atuação direciona-se prioritariamente a famílias, idosos e crianças sem acesso facilitado a serviços essenciais de saúde.</p>
+          <ul class="publico-list">
+            <li><strong>Ação Preventiva:</strong> Mutirões de exames preventivos e campanhas de vacinação.</li>
+            <li><strong>Atendimento Especializado:</strong> Consultas comunitárias e orientação psicológica.</li>
+            <li><strong>Educação em Saúde:</strong> Oficinas sobre nutrição, higiene e hábitos saudáveis.</li>
+          </ul>
+        </div>
+        <div class="publico-imagem">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600" alt="Profissionais de saúde atendendo em ação comunitária da Health Nova" loading="lazy">
+          <span class="img-credit">Foto: Divulgação / Health Nova</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé Institucional -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h3>Health Nova</h3>
+        <p>Transformando vidas através da saúde e do cuidado humano.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Fale Connosco</h4>
+        <p>Email: contato@healthnova.org</p>
+        <p>Telefone: (11) 94002-8922</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Health Nova. Projeto Académico desenvolvido para fins educacionais.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+CSS
+
+/* Variáveis baseadas na paleta de cores institucional combinada */
+:root {
+  --purple-main: #5F0F40;
+  --purple-sec: #9A2985;
+  --purple-accent: #CF51B8;
+  --yellow-main: #FCBA07;
+  --yellow-sec: #FED65C;
+  --orange-main: #D35D14;
+  --orange-sec: #F38836;
+  --text-color: #181818;
+  --bg-light: #FDFBF8;
+  --white: #FFFFFF;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navegação */
+.navbar {
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 45px;
+  height: 40px;
+}
+
+.brand-text {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--purple-main);
+}
+
+.brand-text span {
+  color: var(--orange-main);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--purple-sec);
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--purple-main);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--purple-sec);
+}
+
+/* Hero específica da página Sobre */
+.hero-sobre {
+  background: linear-gradient(135deg, var(--purple-main) 0%, var(--purple-sec) 60%, var(--orange-main) 100%);
+  color: var(--white);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+}
+
+.hero-sobre h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-sobre p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Secções Gerais com Flexbox/Grid */
+.section {
+  padding: 4rem 0;
+}
+
+.bg-light {
+  background-color: #F7F3F5;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title h2 {
+  font-size: 2.2rem;
+  color: var(--purple-main);
+  margin-bottom: 0.5rem;
+}
+
+.section-title p {
+  color: #666;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.icon-purple { background: rgba(95, 15, 64, 0.1); }
+.icon-yellow { background: rgba(252, 186, 7, 0.2); }
+.icon-orange { background: rgba(211, 93, 20, 0.1); }
+
+.pillar-card h3 {
+  color: var(--purple-main);
+  margin-bottom: 1rem;
+}
+
+/* Secção Público Atendido (Flexbox real conforme rubrica) */
+.publico-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.publico-texto {
+  flex: 1;
+  min-width: 280px;
+}
+
+.publico-texto h2 {
+  color: var(--purple-main);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.publico-list {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+.publico-list li {
+  margin-bottom: 0.8rem;
+}
+
+.publico-imagem {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.publico-imagem img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.img-credit {
+  display: block;
+  font-size: 0.75rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+/* Rodapé */
+.footer {
+  background: var(--purple-main);
+  color: var(--white);
+  padding-top: 3.5rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.footer h3, .footer h4 {
+  color: var(--yellow-main);
+  margin-bottom: 1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links a {
+  color: var(--white);
+  text-decoration: none;
+  line-height: 2;
+  opacity: 0.8;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: var(--yellow-sec);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 1.2rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Responsividade real com @media query (Exigência do projeto) */
+@media (max-width: 768px) {
+  .hero-sobre h1 { font-size: 2rem; }
+  .nav-links { display: none; }
+  .publico-container {
+    flex-direction: column;
+  }
+}
+
+JS
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Animação de Contagem das Métricas
+  const counters = document.querySelectorAll(".metric-number");
+  let animated = false;
+
+  const startCounters = () => {
+    counters.forEach((counter) => {
+      const target = +counter.getAttribute("data-target");
+      const duration = 2000; // Tempo total da animação em milissegundos
+      const stepTime = 20;
+      const steps = duration / stepTime;
+      const increment = target / steps;
+      let current = 0;
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          counter.innerText = target.toLocaleString("pt-BR") + "+";
+          clearInterval(timer);
+        } else {
+          counter.innerText = Math.ceil(current).toLocaleString("pt-BR");
+        }
+      }, stepTime);
+    });
+  };
+
+  // Trigger da animação quando a secção fica visível na ecrã
+  const metricsSection = document.querySelector(".metrics-section");
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !animated) {
+        startCounters();
+        animated = true;
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if (metricsSection) {
+    observer.observe(metricsSection);
+  }
+});

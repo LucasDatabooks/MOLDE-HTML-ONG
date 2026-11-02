@@ -11,7 +11,8 @@
   --amareloclaro: #fed65c;
   --laranga: #d35d14;
   --laranjaclaro: #f38836;
-  --corp: rgb(24, 24, 24);
+  --corp: #181818;
+  --bg-light: #fff8ee;
   --fonteh1: "Archivo Black", sans-serif;
   --fonteh2: "Archivo Black", sans-serif;
   --fontep: "Google Sans", sans-serif;
@@ -24,6 +25,7 @@
 }
 body {
   overflow-x: hidden; /* Essencial para cortar a metade do menu na parede lateral sem gerar scroll horizontal */
+  background-color: var(--bg-light);
 }
 h1 {
   font-family: "Archivo Black", sans-serif;
@@ -117,7 +119,6 @@ p {
   margin-bottom: 100px;
   width: 100%;
   gap: 0%;
-  
 }
 .linha {
   width: 12%;

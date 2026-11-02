@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato</title>
+  <link rel="stylesheet" href="./contato.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <nav class="nav">
+      <div class="logo">
+        <img src="../img/logo.png" alt="Logo da ONG Health Nova" width="80">
+        <div class="titulo">
+          <h1>ONG Health Nova</h1>
+          <h2>Saude e bem estar</h2>
+        </div>
+      </div>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Projetos/projetos.html">Oque nós fazemos?</a></li>
+        <li><a href="../Sobre/sobre.html">Nossa história</a></li>
+        <li><a href="./contato.html">Fale conosco!</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section class="contato">
+    <h1>Fale conosco</h1>
+
+    <div class="resumo" id="resumo-erros" role="alert"></div>
+
+    <form id="form-contato" novalidate>
+      <div class="campo">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome">
+        <div class="erro" id="erro-nome"></div>
+      </div>
+
+      <div class="campo">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="seunome@email.com">
+        <div class="erro" id="erro-email"></div>
+      </div>
+
+      <div class="campo">
+        <label for="assunto">Assunto</label>
+        <textarea id="assunto" name="assunto" rows="4"></textarea>
+        <div class="erro" id="erro-assunto"></div>
+      </div>
+
+      <button type="submit">Enviar</button>
+      <div class="sucesso" id="mensagem-sucesso"></div>
+    </form>
+  </section>
+
+      <!-- Footer do site, está com  direitos autorais e links pras outras pages do site, também informa os membros da equipe que desenvolveu o site -->
+<footer class="footer">
+    <p class="footerp">
+        &copy; 
+        2026 ONG Health Nova. Todos os direitos  reservados. 
+    </p>
+    <p class="footerp">Lucas de Oliveira
+        Clara Costa Gonçalves
+        Kaio da Silva Oliveira
+        Vinicius do Nascimento Silva
+        Alefe Richard Silva <br>
+        João Victor de Almeida Ferreira
+        Ayssa Baestero dos Santos
+        Nicolas Silva Marcos
+        Jesus David Casanova Molanos
+    </p>        
+    </div>
+    <a href="projetos.html">Conheça nossos projetos</a>
+    <a href="sobre.html">Nossa história</a>
+    <a href="contato.html">Fale conosco!</a>
+ </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

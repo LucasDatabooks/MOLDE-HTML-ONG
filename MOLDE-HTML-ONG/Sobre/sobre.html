@@ -1,0 +1,143 @@
+<!-- Declaração do tipo de documento HTML5 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configuração de codificação de caracteres (acentuação em português) -->
+    <meta charset="UTF-8">
+    <!-- Configuração de responsividade para celulares e tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História - ONG Health Nova</title>
+    
+    <!-- Vinculação do arquivo de estilos CSS externo -->
+    <link rel="stylesheet" href="./sobre.css">
+    
+    <!-- Importação da fonte institucional Plus Jakarta Sans via Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Carregamento diferido do script JavaScript para interatividade -->
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+    <!-- ==========================================================================
+         CABECALHO E NAVEGACAO PRINCIPAL (NAVBAR)
+         ========================================================================== -->
+    <header class="navbar">
+        <nav class="nav-container">
+            <!-- Área da Marca / Logótipo da ONG -->
+            <a href="../img/logo.png" class="logo">
+                   
+                <!-- Título e Subtítulo da ONG no Cabeçalho -->
+                <div class="titulo">
+                    <h1 style="text-align: left;">ONG Health Nova</h1>
+                    <h2 style="text-align: right;">Saúde e bem estar</h2>
+                </div>
+            </a>
+
+            <!-- Botão do Menu Hambúrguer (Visível apenas em telas menores/celular) -->
+            <div class="menu-toggle" id="mobile-menu" aria-label="Abrir Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- Lista de Links de Navegação do Site -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projetos.html">Oque nós fazemos?</a></li>
+                <li><a href="sobre.html" class="active">Nossa história</a></li>
+                <li><a href="contato.html">Fale conosco!</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==========================================================================
+         CONTEUDO PRINCIPAL DA PAGINA (SOBRE / NOSSA HISTORIA)
+         ========================================================================== -->
+    <main>
+        <!-- Banner Principal de Apresentação (Hero Section) -->
+        <section class="hero-sobre">
+            <div class="container hero-content">
+                <span class="badge">Nossa História</span>
+                <h1>Transformando Vidas Através da Saúde</h1>
+                <p>A ONG Health Nova nasceu do compromisso em democratizar o acesso à saúde de qualidade, promovendo prevenção, bem-estar e cuidados humanizados nas comunidades vulneráveis.</p>
+            </div>
+        </section>
+
+        <!-- Secção de Filosofia Institucional (Missão, Visão e Valores) -->
+        <section class="section" id="filosofia">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Missão, Visão e Valores</h2>
+                    <p>Os pilares fundamentais que guiam a nossa atuação diária.</p>
+                </div>
+
+                <!-- Grelha com 3 Cartões Informativos (Dispostos com CSS Grid) -->
+                <div class="grid-3">
+                    <article class="card pillar-card">
+                        <div class="icon-box icon-purple">🎯</div>
+                        <h3>Missão</h3>
+                        <p>Promover a saúde integral, a prevenção de doenças e o cuidado humanizado para populações em situação de vulnerabilidade social.</p>
+                    </article>
+
+                    <article class="card pillar-card">
+                        <div class="icon-box icon-yellow">👁️</div>
+                        <h3>Visão</h3>
+                        <p>Ser referência em impacto social e inovação na área da saúde comunitária, unindo forças para construir um futuro mais justo e saudável.</p>
+                    </article>
+
+                    <article class="card pillar-card">
+                        <div class="icon-box icon-orange">❤️</div>
+                        <h3>Valores</h3>
+                        <p>Humanização no atendimento, ética, igualdade de acesso, empatia, transparência e cooperação comunitária contínua.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secção de Público Atendido e Frentes de Ação (Disposto com Flexbox) -->
+        <section class="section bg-light" id="publico">
+            <div class="container publico-container">
+                <div class="publico-texto">
+                    <h2>Quem Nós Atendemos</h2>
+                    <p>Nossa atuação atende diretamente crianças, jovens, adultos e idosos sem acesso facilitado a serviços essenciais de saúde e bem-estar.</p>
+                    <ul class="publico-list">
+                        <li><strong>Ações Preventivas:</strong> Exames comunitários e palestras orientativas.</li>
+                        <li><strong>Apoio Especializado:</strong> Atendimento psicológico e nutricional.</li>
+                        <li><strong>Educação e Bem-estar:</strong> Oficinas de higiene, hábitos saudáveis e qualidade de vida.</li>
+                    </ul>
+                </div>
+                <div class="publico-imagem">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600" alt="Equipe da ONG em ação comunitária de saúde" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+         RODAPE DO SITE (FOOTER)
+         ========================================================================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Direitos Autorais e Ano -->
+            <p class="copyright">&copy; 2026 ONG Health Nova. Todos os direitos reservados.</p>
+            
+            <!-- Lista com os Nomes de Todos os Integrantes do Grupo -->
+            <p class="integrantes">
+                Lucas de Oliveira Clara Costa Gonçalves Kaio da Silva Oliveira Vinicius do Nascimento Silva Alefe Richard Silva 
+                João Victor de Almeida Ferreira Jesus David Casanova Molanos
+            </p>
+            
+            <!-- Links Rápidos no Rodapé -->
+            <nav class="footer-links">
+                <a href="projetos.html">Conheça nossos projetos</a>
+                <a href="sobre.html">Nossa história</a>
+                <a href="contato.html">Fale conosco!</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>

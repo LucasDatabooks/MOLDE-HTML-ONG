@@ -114,6 +114,8 @@ p {
   width: 100%;
   gap: 10%;
   margin-left: 30%;
+  margin-bottom: 100px;
+  margin-top: 100px;
 }
 div.box1, div.box2 {
   box-sizing: border-box;
@@ -174,6 +176,7 @@ div.box2 {
   min-height: calc(var(--tam) + 120px);
   overflow: hidden; /* esconde a metade esquerda da pizza */
   background-color: var(--bg-menu);
+  border-bottom-right-radius: 32%;
   transition: background-color 1s ease;
 }
 .roda-area {

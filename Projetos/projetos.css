@@ -217,26 +217,26 @@ div.box1, div.box2, div.box3{
   padding-top: 15px; /* Preenchimento do topo */
 }
 
-/* Rodapé */
+/* --- FOOTER --- */
 footer {
-  background-color: #121212; /* Cor de fundo */
-  color: #fff; /* Cor */
-  padding: 20px; /* Preenchimento de área */
-  text-align: center; /* Centraliza o texto dentro da sua própria caixa */
-  font-family: "Grandstander", cursive;  /* Tipo de fonte usada */
-  font-optical-sizing: auto; /* Dimensionamento optico da fonte */
-  font-size: 14px; /* Tamanho da fonte */
-  font-weight: 200; /* Peso da fonte */
-  font-style: normal; /* Estilo da fonte */
-  width: 100%; /* Largura */
+  height: 160px;
+  background-color: #121212;
+  padding: 20px;
+  text-align: center;
+  font-style: normal;
 }
-
-/* Links e parágrafos do rodapé */
-footer a, footer p{
-  color: #a2a2a2; /* Cor geral */
-  text-decoration: none; /* Decoração do texto */
-  margin-left: 12px; /* Margem direita */
-  font-size: 12px; /* Tamanho da fonte */
+footer p{
+  color: rgb(236, 236, 236);
+  font-family: var(--fontep);
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+footer a {
+  font-family: var(--fontep);
+  color: #a2a2a2;
+  text-decoration: none;
+  margin-left: 12px;
+  font-size: 12px;
 }
 
 /* Fundo escuro da modal */

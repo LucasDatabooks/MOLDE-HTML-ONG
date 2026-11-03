@@ -328,3 +328,34 @@ footer a {
   margin-left: 12px; /* Margem direita */
   font-size: 12px; /* Tamanho da fonte */
 }
+
+/* ===== RESPONSIVO MOBILE (adicionado) - só vale em telas pequenas; o desktop não muda ===== */
+@media (max-width: 768px) {
+  .navbar { padding: 10px 16px; }
+  .logo { gap: 8px; min-width: 0; }
+  .logo img { width: 52px; height: auto; }
+  .titulo h1 { font-size: 16px; }
+  .titulo h2 { font-size: 11px; }
+  .navbar .menu-toggle { display: flex; gap: 5px; padding: 12px 10px; background: none; border: 0; flex-shrink: 0; }
+  .navbar .menu-toggle span { display: block; width: 26px; height: 3px; border-radius: 2px; background: #fff; transition: transform .3s, opacity .3s; }
+  .navbar.menu-aberto .menu-toggle span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .navbar.menu-aberto .menu-toggle span:nth-child(2) { opacity: 0; }
+  .navbar.menu-aberto .menu-toggle span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  .navbar ul { display: none; position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column; gap: 0; padding: 8px 0; background-color: var(--roxo); box-shadow: 0 10px 15px rgba(0,0,0,.2); }
+  .navbar.menu-aberto ul { display: flex; }
+  .navbar ul li a { display: block; padding: 14px 20px; font-size: 17px; }
+  .boxhome { flex-direction: column; margin-top: 48px; margin-bottom: 48px; }
+  div.box1, div.box2, div.box3 { width: 88%; max-width: 380px; margin: 0; }
+  .linha { width: 36px; height: 40px; margin: 0; }
+  #linha1 { background: linear-gradient(180deg, var(--amareloclaro), var(--laranjaclaro)); }
+  #linha2 { background: linear-gradient(180deg, var(--laranjaclaro), var(--roxoclaro)); }
+  footer p { display: block; margin: 0 0 8px; }
+  footer a { display: inline-block; margin: 4px 8px; }
+}
+@media (max-width: 480px) {
+  #menupizza { --tam: 320px; }
+  .texto { font-size: 13px; }
+  .fatia.ativa .texto { font-size: 15px; }
+  .frase-area { padding: 0 14px 0 16px; }
+  #frase { font-size: 20px; }
+}

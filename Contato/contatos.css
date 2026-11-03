@@ -183,3 +183,28 @@ footer a, footer p {
   margin-left: 12px;
   font-size: 12px;
 }
+
+/* ===== RESPONSIVO MOBILE (adicionado) - só vale em telas pequenas; o desktop não muda ===== */
+@media (max-width: 768px) {
+  .navbar { padding: 10px 16px; }
+  .logo { gap: 8px; min-width: 0; }
+  .logo img { width: 52px; height: auto; }
+  .titulo h1 { font-size: 16px; }
+  .titulo h2 { font-size: 11px; }
+  .navbar .menu-toggle { display: flex; gap: 5px; padding: 12px 10px; background: none; border: 0; flex-shrink: 0; }
+  .navbar .menu-toggle span { display: block; width: 26px; height: 3px; border-radius: 2px; background: #fff; transition: transform .3s, opacity .3s; }
+  .navbar.menu-aberto .menu-toggle span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .navbar.menu-aberto .menu-toggle span:nth-child(2) { opacity: 0; }
+  .navbar.menu-aberto .menu-toggle span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  .navbar ul { display: none; position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column; gap: 0; padding: 8px 0; background-color: var(--roxo); box-shadow: 0 10px 15px rgba(0,0,0,.2); }
+  .navbar.menu-aberto ul { display: flex; }
+  .navbar ul li a { display: block; padding: 14px 20px; font-size: 17px; }
+  .fundo { height: auto; min-height: 100vh; padding: 16px; }
+  .contato { width: 100%; margin: 32px auto; padding: 20px 16px; }
+  .contato h1 { font-size: 28px; }
+  .contato form, .campo { width: 100%; }
+  #nome, #email, #assunto { width: 100%; font-size: 16px; }
+  label { font-size: 18px; }
+  footer p { display: block; margin: 0 0 8px; }
+  footer a { display: inline-block; margin: 4px 8px; }
+}

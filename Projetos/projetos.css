@@ -31,7 +31,7 @@ body{
   display: flex; /* Display flexível pra não ter quebra no dimensionamento do conteúdo se a página não estiver em 100%*/
   flex-direction: column; /* Direção da flexibilização */
   min-height: 100vh; /* Trava a altura geral até certo ponto da página */
-  background: linear-gradient(200deg, var(--amareloclaro), var(--laranjaclaro)); /* Define a cor inicial e a cor final do gradiente */
+  background: linear-gradient(135deg, var(--laranjaclaro) 0%, var(--amarelo) 60%, var(--amareloclaro) 100%);
 }
 
 /* Título da ONG */
@@ -53,8 +53,7 @@ h2{
 h3{
   font-family: "Archivo Black", sans-serif; /* Fontes usadas no H3*/
   font-size: 18px; /* Tamanho da fonte */
-  font-weight: 100; /* 'Peso' da fonte */
-  color: #fff; /* Cor da fonte */
+  color: #000; /* Cor da fonte */
 }
 
 /* Parágrafos em geral */
@@ -67,11 +66,11 @@ p{
 /* Cabeçalho */
 .navbar{
   background-color: var(--amarelo); /* Cor de fundo */
-  padding: 15px 30px; /* Preenchimento de área */
-  width: 100%; /* Largura */
-  height: 85px; /* Altura */
-  display: flex; /* Determina a disposição das caixas geradas por um elemento */
-  align-items: center; /* Alinha itens no centro */
+  padding: 12px 40px;
+  width: 100%;
+  position: sticky; /* Mantém a navbar fixa no topo durante o scroll */
+  top: 0;
+  z-index: 1000;
 }
 
 .nav{
@@ -90,22 +89,26 @@ p{
 }
 
 .titulo{
-  display: flex; /* Determina a disposição das caixas geradas por um elemento */
+  display: flex;
   flex-direction: column;
-  text-align: center;
-  margin-left: 10px;
 }
 
 .titulo h1{
-  color: #fff; /* Cor geral */
-  font-size: 24px; /* Tamanho da fonte */
-  margin-top: 0;
+  color: #FFFFFF;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.1;
+  font-family: var(--fonteh1);
+  margin: 0;
 }
 
 .titulo h2{
-  color: #fff; /* Cor geral */
-  font-family: "Archivo Black", sans-serif;
-  font-size: 20px; /* Tamanho da fonte */
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--fonteh2);
+  opacity: 0.95;
+  margin: 0;
 }
 
 .navbar ul{
@@ -151,52 +154,53 @@ h3:hover{
   padding: 75px 20px; /* Preenchimento de área */
   flex: 1;                   
   flex-wrap: wrap; /* Se o zoom aumentar muito ou for em tablet/celular, eles descem organizados */
-  text-align: justify; 
   color: #fff; /* Cor geral */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9); /* Adiciona sombra escura leve */
 }
 
 div.box1, div.box2, div.box3{
   box-sizing: border-box; /* Configurações para ficar dentro do espaço da caixa */
-  border-radius: 20px; /* Bordas arredondadas modernas */
+  border-radius: 30px; /* Bordas arredondadas modernas */
   padding: 38px; /* Preenchimento de área */
   width: 380px; /* Largura */
   max-width: 100%; /* Largura máxima */
-  background-color: var(--amarelo); /* Cor do fundo de tela */
+  background-color: #ffffff; /* Cor do fundo de tela */
   display: flex; /* Determina a disposição das caixas geradas por um elemento */
   flex-direction: column; /* Deixa os 3 cartões em coluna em telas grandes */
   justify-content: space-between; /* Centraliza o conjunto na tela */ 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombreamento das caixas */ 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Sombreamento das caixas */ 
 }
 
 #box1h3, #box2h3, #box3h3{
   width: calc(100% + 56px); /* Largura */
   margin: -28px -28px 28px -28px; /* Margens */
+  padding: 18px 20px;
   text-align: center; /* Alinhamento do texto */
   background-color: var(--amarelo); /* Cor de fundo */
-  border-top-left-radius: 20px; /* Formato da borda da esquerda */ 
-  border-top-right-radius: 20px; /* Formato da borda da direita */ 
+  border-radius: 30px; /* Formato da borda da esquerda */
+}
+
+#box1h1 h3, #box2h3 h3, #box3h3 h3{
+  color: #000000;
+  font-weight: bold;
 }
 
 .proj{
-  text-align: justify; /* Alinhamento do texto */
-  font-weight: bold; /* Peso da fonte, no caso, negrito */
   font-size: 16px; /* Tamanho da fonte */
-  color: #fff; /* Cor geral */
+  font-weight:bold;
+  color: #000;
 }
 
 /* Imagens dentro dos cards responsivas */
 #recreacao, #movimente, #corrida{
-  border-radius: 5px; /* Grossura da borda */
+  border-radius: 12px; /* Grossura da borda */
   margin-top: 20px; /* Espaço da margem do topo */
-  padding: 5px; /* Preenchimento de área */
+  padding: 0; /* Preenchimento de área */
   width: 100%; /* Largura */
   height: auto; /* Altura */
   object-fit: cover; /* Encaixe do objeto */
-  border: 1px solid rgba(255, 255, 255, 0); /* Adiciona uma borda leve e semi-transparente */
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);  /* Adiciona um sombreamento elegante ao redor da foto */
   cursor: pointer; /* Tipo de cursor do mouse */
   transition: opacity 0.3s ease; /* Transição de cores */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 /* Passar o mouse em cima das imagens*/
@@ -208,35 +212,47 @@ div.box1, div.box2, div.box3{
 #oquefazemos{
   width: 100%; /* Largura */
   max-width: 1200px; /* Largura máxima */
-  margin: 30px auto 0 auto; /* Centraliza o elemento horizontalmente na tela usando margens automáticas */
+  margin: 40px auto 0 auto; /* Centraliza o elemento horizontalmente na tela usando margens automáticas */
   text-align: center; /* Centraliza o texto dentro da sua própria caixa */
   color: #fff; /* Texto branco */
-  font-size: 3rem; /* Tamanho grande */
+  font-size: 2.2rem; /* Tamanho grande */
   font-weight: bold; /* Peso da fonte, no caso, negrito */
   text-shadow: 2px 2px 1px var(--corp); /* Sombra preta */
   padding-top: 15px; /* Preenchimento do topo */
 }
 
-/* --- FOOTER --- */
+#projetos{
+  width: 100%; /* Largura */
+  max-width: 1200px; /* Largura máxima */
+  margin: 5px auto -20px auto; /* Centraliza o elemento horizontalmente na tela usando margens automáticas */
+  text-align: center; /* Centraliza o texto dentro da sua própria caixa */
+  color: #fff; /* Texto branco */
+  font-size: 1.0rem; /* Tamanho grande */
+  font-weight: bold; /* Peso da fonte, no caso, negrito */
+  text-shadow: 2px 2px 1px var(--corp); /* Sombra preta */
+  padding-top: 10px; /* Preenchimento do topo */
+}
+
+/* Rodapé */
 footer {
-  height: 160px;
-  background-color: #121212;
-  padding: 20px;
-  text-align: center;
-  font-style: normal;
+  background-color: #121212; /* Cor de fundo */
+  color: #fff; /* Cor */
+  padding: 20px; /* Preenchimento de área */
+  text-align: center; /* Centraliza o texto dentro da sua própria caixa */
+  font-family: "Grandstander", cursive;  /* Tipo de fonte usada */
+  font-optical-sizing: auto; /* Dimensionamento optico da fonte */
+  font-size: 14px; /* Tamanho da fonte */
+  font-weight: 200; /* Peso da fonte */
+  font-style: normal; /* Estilo da fonte */
+  width: 100%; /* Largura */
 }
-footer p{
-  color: rgb(236, 236, 236);
-  font-family: var(--fontep);
-  margin-bottom: 12px;
-  margin-top: 12px;
-}
-footer a {
-  font-family: var(--fontep);
-  color: #a2a2a2;
-  text-decoration: none;
-  margin-left: 12px;
-  font-size: 12px;
+
+/* Links e parágrafos do rodapé */
+footer a, footer p{
+  color: #a2a2a2; /* Cor geral */
+  text-decoration: none; /* Decoração do texto */
+  margin-left: 12px; /* Margem direita */
+  font-size: 12px; /* Tamanho da fonte */
 }
 
 /* Fundo escuro da modal */
@@ -283,4 +299,38 @@ footer a {
 /* Botão de fechamento de zoom */
 .fechar-zoom:hover{
   color: var(--amarelo); /* Cor do hover de fechamento */
+}
+
+/* Responsividade em aparelhos moveis */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  /* Esconde os links por padrão no celular, abrindo apenas com o clique */
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--purple-sec);
+    padding: 20px 0;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+  }
+
+  /* Classe adicionada via JavaScript quando o menu é clicado no celular */
+  .nav.active {
+    display: flex;
+  }
+
+  .proj {
+    flex-direction: column;
+  }
+
+  .footerp {
+    flex-direction: column;
+    gap: 8px;
+  }
 }

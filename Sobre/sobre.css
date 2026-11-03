@@ -1,10 +1,11 @@
-/* ==========================================================================
-   PALETA DE CORES E VARIAVEIS GLOBAIS DO PROJETO
-   ========================================================================== */
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Marcellus&family=Marcellus+SC&family=Syne:wght@400..800&display=swap');
+
+:root{
   /* Cores Principais baseadas na Especificação do Projeto */
   --purple-main: #5F0F40;   /* Roxo profundo */
-  --purple-sec: #5f0f40;    /* Roxo claro (usado no Navbar) */
+  --purple-sec: #9a2985;    /* Roxo claro (usado no Navbar) */
   --purple-accent: #CF51B8; /* Rosa-arroxeado */
   --yellow-main: #FCBA07;   /* Amarelo vibrante */
   --yellow-sec: #FED65C;    /* Amarelo suave */
@@ -15,25 +16,29 @@
   --white: #FFFFFF;         /* Branco puro */
   --footer-bg: #121212;     /* Fundo escuro do Rodapé */
   --transition: all 0.3s ease; /* Transição suave para efeitos de hover */
+  --fonteh1: "Archivo Black", sans-serif;
+  --fonteh2: "Archivo Black", sans-serif;
+  --fontep: "Google Sans", sans-serif;
 }
 
 /* Reset básico de margens e configuração de box-model para evitar estouro de largura */
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 /* Estilização padrão do corpo do documento */
-body {
+body{
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--text-color);
   background-color: var(--bg-light);
   line-height: 1.6;
+  background: linear-gradient(135deg, var(--purple-main) 0%, var(--purple-sec) 60%, var(--orange-main) 100%);
 }
 
 /* Container centralizado para alinhar os conteúdos da página */
-.container {
+.container{
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
@@ -42,165 +47,119 @@ body {
 /* ==========================================================================
    ESTILIZACAO DA NAVBAR (CABEÇALHO FIXO)
    ========================================================================== */
-.navbar {
+.navbar{
   background-color: var(--purple-sec); /* Roxo-magenta institucional */
   padding: 12px 40px;
   width: 100%;
   position: sticky; /* Mantém a navbar fixa no topo durante o scroll */
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave abaixo do cabeçalho */
 }
 
 /* Layout interno do container da Navbar utilizando Flexbox */
-.nav-container {
-  display: flex;
-  justify-content: space-between; /* Espaça a logo à esquerda e o menu à direita */
-  align-items: right;
-  width: 100%;
-  max-width: 1300px;
+.nav-container{
+  display: flex; /* Determina a disposição das caixas geradas por um elemento */
+  justify-content: space-between; /* Centraliza o conjunto na tela */
+  align-items: center; /* Alinha itens no centro */
+  width: 100%; /* Largura */
   margin: 0 auto;
 }
 
-/* Estilização da área da marca/logo */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
+/* Logo da ONG */
+.logo{
+  display: flex; /* Determina a disposição das caixas geradas por um elemento */
+  align-items: center; /* Alinha itens no centro */
+  margin-left: 0; /* Margem esquerda */
 }
 
-.brand-logo {
+.brand-logo{
   width: 55px;
   height: 50px;
 }
 
-.titulo {
+.titulo{
   display: flex;
   flex-direction: column;
 }
 
-.titulo h1 {
+.titulo h1{
   color: #FFFFFF;
   font-size: 22px;
   font-weight: 800;
+  font-family: var(--fonteh1);
   line-height: 1.1;
   margin: 0;
 }
 
-.titulo h2 {
+.titulo h2{
   color: #FFFFFF;
   font-size: 14px;
   font-weight: 600;
+  font-family: var(--fonteh2);
   opacity: 0.95;
   margin: 0;
 }
 
 /* Lista dos links do menu de navegação superior */
-.nav-links {
+.navbar ul{
   list-style: none;
-  display: flex;
-  gap: 24px;
-  align-items: center;
+  display: flex; /* Determina a disposição das caixas geradas por um elemento */
+  gap: 22px;
 }
 
-.nav-links li a {
-  color: #FFFFFF;
+.navbar ul li a{
+  color: #ffffff; /* Cor geral */
   text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-  transition: var(--transition);
+  font-family: "Grandstander", cursive;
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-/* Efeito ao passar o mouse ou no link da página ativa */
-.nav-links li a:hover,
-.nav-links li a.active {
-  color: var(--yellow-sec);
-  text-decoration: underline;
+.navbar ul li a:hover{
+  color: var(--roxomaisclaro);
 }
 
-/* Ícone do Menu Hambúrguer (Oculto em telas de computador) */
-.menu-toggle {
-  display: none;
+.navbar .menu-toggle{
+  display: none; /* Determina a disposição das caixas geradas por um elemento */
   flex-direction: column;
   cursor: pointer;
-  gap: 5px;
 }
 
-.menu-toggle .bar {
-  width: 28px;
-  height: 3px;
-  background-color: #FFFFFF;
-  border-radius: 2px;
-  transition: var(--transition);
-}
-
-/* ==========================================================================
-   CONTEUDO PRINCIPAL DA PAGINA SOBRE / NOSSA HISTORIA
-   ========================================================================== */
-/* Banner de destaque com gradiente */
-.hero-sobre {
-  background: linear-gradient(135deg, var(--purple-main) 0%, var(--purple-sec) 60%, var(--orange-main) 100%);
-  color: var(--white);
-  padding: 5rem 0;
-  text-align: center;
-}
-
-.badge {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 0.4rem 1.2rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  display: inline-block;
-  margin-bottom: 1.2rem;
-}
-
-.hero-sobre h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.hero-sobre p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.section {
+.section{
   padding: 4rem 0;
 }
 
-.bg-light {
+.bg-light{
   background-color: #F7F3F5;
 }
 
-.section-title {
+.section-title{
   text-align: center;
   margin-bottom: 3rem;
+  text-shadow: 2px 2px 1px #000; /* Sombra preta */
 }
 
-.section-title h2 {
+.section-title h2{
   font-size: 2.2rem;
-  color: var(--purple-main);
+  color: #fff;
   margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 1px #000; /* Sombra preta */
 }
 
-.section-title p {
-  color: #666;
+.section-title p{
+  color: #fff;
+  text-shadow: 2px 2px 1px #000; /* Sombra preta */
 }
 
 /* Grelha responsiva de 3 colunas para os cartões de Missão, Visão e Valores */
-.grid-3 {
+.grid-3{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-.card {
+.card{
   background: var(--white);
   border-radius: 16px;
   padding: 2rem;
@@ -208,12 +167,12 @@ body {
   transition: var(--transition);
 }
 
-.card:hover {
+.card:hover{
   transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
   box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
-.icon-box {
+.icon-box{
   width: 60px;
   height: 60px;
   border-radius: 12px;
@@ -224,79 +183,114 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.icon-purple { background: rgba(95, 15, 64, 0.1); }
-.icon-yellow { background: rgba(252, 186, 7, 0.2); }
-.icon-orange { background: rgba(211, 93, 20, 0.1); }
+.icon-purple{ 
+  background: rgba(95, 15, 64, 0.1); 
+}
 
-.pillar-card h3 {
+.icon-yellow{ 
+  background: rgba(252, 186, 7, 0.2); 
+}
+
+.icon-orange{ 
+  background: rgba(211, 93, 20, 0.1); 
+}
+
+.pillar-card h3{
   color: var(--purple-main);
   margin-bottom: 1rem;
 }
 
 /* Secção de Público Atendido utilizando Flexbox */
-.publico-container {
+.publico-container{
   display: flex;
   align-items: center;
   gap: 3rem;
   flex-wrap: wrap;
 }
 
-.publico-texto {
+.publico-texto{
   flex: 1;
   min-width: 280px;
 }
 
-.publico-texto h2 {
+.publico-texto h2{
   color: var(--purple-main);
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.publico-list {
+.publico-list{
   list-style-type: disc;
   padding-left: 1.2rem;
   margin-top: 1rem;
 }
 
-.publico-list li {
+.publico-list li{
   margin-bottom: 0.8rem;
 }
 
-.publico-imagem {
+.publico-imagem{
   flex: 1;
   min-width: 280px;
   text-align: center;
 }
 
-.publico-imagem img {
+.publico-imagem img{
   width: 100%;
   max-width: 500px;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
-/* --- FOOTER --- */
+/* Rodapé */
 footer {
-  height: 160px;
-  background-color: #121212;
-  padding: 20px;
-  text-align: center;
-  font-style: normal;
-}
-footer p{
-  color: rgb(236, 236, 236);
-  font-family: var(--fontep);
-  margin-bottom: 12px;
-  margin-top: 12px;
-}
-footer a {
-  font-family: var(--fontep);
-  color: #a2a2a2;
-  text-decoration: none;
-  margin-left: 12px;
-  font-size: 12px;
+  background-color: #121212; /* Cor de fundo */
+  color: #fff; /* Cor */
+  padding: 20px; /* Preenchimento de área */
+  text-align: center; /* Centraliza o texto dentro da sua própria caixa */
+  font-family: "Grandstander", cursive;  /* Tipo de fonte usada */
+  font-optical-sizing: auto; /* Dimensionamento optico da fonte */
+  font-size: 12px; /* Tamanho da fonte */
+  font-weight: 200; /* Peso da fonte */
+  font-style: normal; /* Estilo da fonte */
+  width: 100%; /* Largura */
 }
 
+.footer-container {
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+/* Texto contínuo com a lista dos alunos integrantes do grupo */
+.integrantes {
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: #888888;
+  text-decoration: none;
+  font-size: 12px;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
 
 /* ==========================================================================
    REGRAS DE RESPONSIVIDADE (MEDIA QUERIES PARA CELULAR E TABLET)
@@ -304,11 +298,6 @@ footer a {
 @media (max-width: 768px) {
   .navbar {
     padding: 12px 20px;
-  }
-
-  /* Exibe o ícone hambúrguer em dispositivos móveis */
-  .menu-toggle {
-    display: flex;
   }
 
   /* Esconde os links por padrão no celular, abrindo apenas com o clique */

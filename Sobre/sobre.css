@@ -301,7 +301,7 @@ footer {
   }
 
   /* Esconde os links por padrão no celular, abrindo apenas com o clique */
-  .nav-links {
+  .nav-container {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -314,7 +314,7 @@ footer {
   }
 
   /* Classe adicionada via JavaScript quando o menu é clicado no celular */
-  .nav-links.active {
+  .nav-container.active {
     display: flex;
   }
 

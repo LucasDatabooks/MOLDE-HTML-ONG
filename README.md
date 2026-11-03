@@ -2,7 +2,7 @@
 
 Projeto integrador da disciplina **Fundamentos da Web e Desenvolvimento Front-end (HTML, CSS e JavaScript)**.
 
-> ⚠️ **Protótipo acadêmico.** A ONG Health Nova é fictícia. Este site não representa nenhuma organização real, não envia e-mails, não coleta nem armazena dados e não processa pagamentos. A confirmação do formulário de contato é apenas simulada.
+> **Protótipo acadêmico.** A ONG Health Nova é fictícia. Este site não representa nenhuma organização real, não envia e-mails, não coleta nem armazena dados e não processa pagamentos. A confirmação do formulário de contato é apenas simulada.
 
 ## Integrantes
 

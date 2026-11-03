@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contatos</title>
+  <title>Contato - ONG Health Nova</title>
   <link rel="stylesheet" href="./contatos.css">
+  <!-- Script do formulário e do menu mobile (carregados depois do HTML) -->
   <script src="./contato.js" defer></script>
-    <script src="../js/menu-mobile.js" defer></script>
+  <script src="../js/menu-mobile.js" defer></script>
 </head>
 <body>
+  <!-- Cabeçalho com logo e menu de navegação -->
   <header class="navbar">
     <nav class="nav">
       <div class="logo">
         <img src="../img/logo.png" alt="Logo da ONG Health Nova" width="80">
         <div class="titulo">
           <h1>ONG Health Nova</h1>
-          <h2>Saude e bem estar</h2>
+          <h2>Saúde e bem-estar</h2>
         </div>
       </div>
       <ul>
@@ -24,57 +26,69 @@
         <li><a href="../Sobre/sobre.html">Nossa história</a></li>
         <li><a href="./contatos.html">Fale conosco!</a></li>
       </ul>
-            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </nav>
   </header>
-  <div class="fundo">
-  
-  <section class="contato">
-    <h1>Fale conosco</h1>
 
-    <div class="resumo" id="resumo-erros" role="alert"></div>
+  <!-- Conteúdo principal da página -->
+  <main class="fundo">
+    <section class="contato">
+      <h2>Fale conosco</h2>
 
-    <form id="form-contato" novalidate>
-      <div class="campo">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" placeholder="Alefe Manga da Silva" name="nome">
-        <div class="erro" id="erro-nome"></div>
+      <!-- Orientações de voluntariado e participação -->
+      <div class="voluntariado">
+        <h3>Quer participar?</h3>
+        <p>Você pode ser voluntário nos nossos projetos: aulas de funcional no parque, esportes coletivos e clube de corrida. Envie uma mensagem com o assunto "Voluntariado" e conte como gostaria de ajudar.</p>
       </div>
 
-      <div class="campo">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="seunome@email.com" id="email">
-        <div class="erro" id="erro-email"></div>
-      </div>
+      <!-- Resumo dos erros (preenchido pelo JavaScript) -->
+      <div class="resumo" id="resumo-erros" role="alert"></div>
 
-      <div class="campo">
-        <label for="assunto">Assunto:</label>
-        <textarea id="assunto" name="assunto" placeholder="Tenho uma reclamação a fazer, xyz" ></textarea>
-        <div class="erro" id="erro-assunto"></div>
-      </div>
+      <form id="form-contato" novalidate>
+        <div class="campo">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Alefe Manga da Silva" required minlength="3">
+          <div class="erro" id="erro-nome"></div>
+        </div>
 
-      <button type="submit">Enviar</button>
-      <div class="sucesso" id="mensagem-sucesso"></div>
-    </form>
-  </section>
-  </div>
-      <!-- Footer do site, está com  direitos autorais e links pras outras pages do site, também informa os membros da equipe que desenvolveu o site -->
-<footer class="footer">
-    <p class="footerp">
-        &copy; 
-        2026 ONG Health Nova. Todos os direitos reservados. 
-    </p>
+        <div class="campo">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="seunome@email.com" required>
+          <div class="erro" id="erro-email"></div>
+        </div>
+
+        <div class="campo">
+          <label for="assunto">Assunto:</label>
+          <input type="text" id="assunto" name="assunto" placeholder="Ex.: Voluntariado" required>
+          <div class="erro" id="erro-assunto"></div>
+        </div>
+
+        <div class="campo">
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" required minlength="10"></textarea>
+          <div class="erro" id="erro-mensagem"></div>
+        </div>
+
+        <button type="submit">Enviar</button>
+        <div class="sucesso" id="mensagem-sucesso"></div>
+        <p class="aviso">Protótipo acadêmico: o envio é apenas simulado. Nenhum e-mail é enviado e nenhum dado é coletado.</p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé com direitos autorais, equipe e links do site -->
+  <footer class="footer">
+    <p class="footerp">&copy; 2026 ONG Health Nova. Todos os direitos reservados.</p>
     <p class="footerp">Lucas de Oliveira,
-        Clara Costa Gonçalves,
-        Kaio da Silva Oliveira,
-        Alefe Richard Silva,
-        João Victor de Almeida Ferreira,
-        Jesus David Casanova Molano
-    </p>        
-    </div>
-    <a href="../index.html">Home</a></li>
-    <a href="../Projetos/projetos.html">Projetos</a></li>
-    <a href="../Sobre/sobre.html">Sobre</a></li>
- </footer>
+      Clara Costa Gonçalves,
+      Kaio da Silva Oliveira,
+      Alefe Richard Silva,
+      João Victor de Almeida Ferreira,
+      Jesus David Casanova Molano
+    </p>
+    <a href="../index.html">Home</a>
+    <a href="../Projetos/projetos.html">Projetos</a>
+    <a href="../Sobre/sobre.html">Sobre</a>
+  </footer>
 </body>
 </html>

@@ -1,7 +1,7 @@
 /* --- IMPORTS DAS FONTES --- */
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Marcellus&family=Marcellus+SC&family=Syne:wght@400..800&display=swap');
+
 /* roots: são estilizações pré definidas para serem usadas várias vezes */
 :root{
   --roxo: #5F0F40;
@@ -26,19 +26,21 @@
 body {
   overflow-x: hidden;
 }
-H1 {
+h1 {
   font-family: var(--fonteh1);
   font-style: normal;
-  color:#121212;
+  color: #121212;
   font-size: 35px;
 }
-.contato h1 {
-  color: #fff;
-}
-H2{
+h2 {
   font-family: var(--fonteh2);
   font-style: normal;
   color: #121212;
+  font-size: 18px;
+}
+h3 {
+  font-family: var(--fonteh2);
+  font-weight: normal;
   font-size: 18px;
 }
 
@@ -67,7 +69,6 @@ H2{
 .titulo {
   display: flex;
   flex-direction: column;
-
 }
 .titulo h1 {
   color: #FFFFFF;
@@ -106,6 +107,8 @@ H2{
   flex-direction: column;
   cursor: pointer;
 }
+
+
 /* --- CONTATO --- */
 .contato {
   width: 90%;
@@ -119,6 +122,26 @@ H2{
   flex-direction: column;
   align-items: center;
 }
+.contato h2 {
+  color: #fff;
+  font-size: 35px;
+}
+
+/* Orientações de voluntariado */
+.voluntariado {
+  color: #fff;
+  font-family: var(--fontep);
+  text-align: center;
+  margin-top: 15px;
+}
+.voluntariado h3 {
+  color: var(--amareloclaro);
+  margin-bottom: 8px;
+}
+.voluntariado p {
+  color: #fff;
+  font-size: 14px;
+}
 
 label {
   font-family: var(--fontep);
@@ -128,7 +151,7 @@ label {
   font-weight: bold;
   color: #fff;
 }
-#nome, #email, #assunto {
+#nome, #email, #assunto, #mensagem {
   width: 400px;
   padding: 8px;
   margin-top: 5px;
@@ -137,9 +160,13 @@ label {
   font-family: var(--fontep);
   font-size: 14px;
 }
-#assunto {
-  height: 150px;      /* altura: aumente ou diminua esse número */
+#mensagem {
+  height: 150px;  /* altura: aumente ou diminua esse número */
   resize: none;   /* o cantinho de arrastar mexe só na altura */
+}
+/* Borda vermelha quando o campo está inválido (classe adicionada pelo JS) */
+.invalido {
+  border: 2px solid #ff4d4d;
 }
 
 button {
@@ -151,17 +178,54 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-family: (--fontep)
+  font-family: var(--fontep);
   font-weight: bold;
 }
 button:hover {
   background-color: var(--amarelo);
 }
 .fundo {
-  background: linear-gradient(135deg, var(--roxoclaro) 0%, var(--laranjaclaro) , var(--roxomaisclaro) 100%);
+  background: linear-gradient(135deg, var(--roxoclaro) 0%, var(--laranjaclaro), var(--roxomaisclaro) 100%);
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.erro {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 5px;
+  font-family: var(--fontep);
+  text-align: center;
+}
+
+.sucesso {
+  color: var(--amareloclaro);
+  font-size: 14px;
+  margin-top: 5px;
+  font-family: var(--fontep);
+  text-align: center;
+}
+
+.resumo {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 5px;
+  font-family: var(--fontep);
+  text-align: center;
+}
+.resumo ul {
+  list-style: none;
+}
+
+/* Aviso de envio simulado */
+.aviso {
+  color: #fff;
+  font-family: var(--fontep);
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+  max-width: 400px;
 }
 
 
@@ -184,7 +248,7 @@ footer a, footer p {
   font-size: 12px;
 }
 
-/* ===== RESPONSIVO MOBILE (adicionado) - só vale em telas pequenas; o desktop não muda ===== */
+/* ===== RESPONSIVO MOBILE - só vale em telas pequenas; o desktop não muda ===== */
 @media (max-width: 768px) {
   .navbar { padding: 10px 16px; }
   .logo { gap: 8px; min-width: 0; }
@@ -199,11 +263,12 @@ footer a, footer p {
   .navbar ul { display: none; position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column; gap: 0; padding: 8px 0; background-color: var(--roxo); box-shadow: 0 10px 15px rgba(0,0,0,.2); }
   .navbar.menu-aberto ul { display: flex; }
   .navbar ul li a { display: block; padding: 14px 20px; font-size: 17px; }
-  .fundo { height: auto; min-height: 100vh; padding: 16px; }
+  .fundo { min-height: 100vh; padding: 16px; }
   .contato { width: 100%; margin: 32px auto; padding: 20px 16px; }
-  .contato h1 { font-size: 28px; }
+  .contato h2 { font-size: 28px; }
   .contato form, .campo { width: 100%; }
-  #nome, #email, #assunto { width: 100%; font-size: 16px; }
+  #nome, #email, #assunto, #mensagem { width: 100%; font-size: 16px; }
+  .aviso { max-width: 100%; }
   label { font-size: 18px; }
   footer p { display: block; margin: 0 0 8px; }
   footer a { display: inline-block; margin: 4px 8px; }
